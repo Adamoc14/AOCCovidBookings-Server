@@ -72,14 +72,14 @@ router.post("/" , async(req , res)=> {
             This email is to confirm you have made an appointment for your Vaccine, find appointment details below
             Date: ${DayName} ${DayDate} ${Month}
             Time: ${Time}\n
-            You can update or edit the booking at https://whmcflu.com/userview?id=${createdUser._id}`,
+            You can update or edit the booking at https://aoccovid.com/userview?id=${createdUser._id}`,
         html: `
             <div class="outerEmailContainer">
                 <div class="innerEmailContainer" style="height: 70vh;
                     justify-content: space-around;border: 1px solid #eee;padding: 1em;background: white;">
                     <div class="emailRow" style="display: grid;
                     place-items: center;">
-                    <img src="https://whmccovid.com/Resources/Images/WHMC_Main.jpg" style="width: 15vw;
+                    <img src="https://aoc-bookings.netlify.app/Resources/Images/AOCLogoF.jpg" style="width: 15vw;
                     border-radius: 50%;
                     height: 15vw;
                     object-fit: cover;">
@@ -94,7 +94,7 @@ router.post("/" , async(req , res)=> {
                     <h2>Date: ${DayName} ${DayDate} ${Month}<br>Time: ${Time}</h2>
                     </div>
                     <div class="emailRow">
-                    <h4><br>You can update or edit the booking at https://whmccovid.com/userview?id=${createdUser._id}</h4>
+                    <h4><br>You can update or edit the booking at https://aoccovid.com/userview?id=${createdUser._id}</h4>
                     </div>
                     <div class="emailRow">
                     <h4><br>Do not use the buttons below.</h4>
