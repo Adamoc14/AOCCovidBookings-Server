@@ -10,16 +10,16 @@ router.get("/", async(req, res) => {
 })
 
 router.post("/", async(req, res) => {
-    const { Month , Dates , Hours, Providers } = req.body,
-    clinicData = { Month , Dates , Hours , Providers }
+    const { Month , Dates , Timeslots } = req.body,
+    clinicData = { Month , Dates , Timeslots }
     clinicCreated = await clinic.create(clinicData)
     res.send(clinicCreated)
 })
 
 router.put("/:id" , async(req, res) => {
     const {id} = req.params,
-        { Month, Dates, Hours, Providers} = req.body
-    newClinic = { Month, Dates, Hours, Providers }
+        { Month, Dates, Timeslots} = req.body
+    newClinic = { Month, Dates, Timeslots }
     await clinic.findByIdAndUpdate(id , newClinic , (err , updatedClinic) => {
         if(err) console.log(err)
         res.send(updatedClinic)
